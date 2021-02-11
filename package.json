@@ -3,11 +3,27 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "prestart": "ng build",
     "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "build": "ng build abstract",
+    "test": "ng test abstract",
+    "lint": "ng lint abstract",
+    "e2e": "ng e2e",
+    "release": "standard-version"
+  },
+  "standard-version": {
+    "packageFiles": [
+      {
+        "filename": "projects/abstract/package.json",
+        "type": "json"
+      }
+    ],
+    "bumpFiles": [
+      {
+        "filename": "projects/abstract/package.json",
+        "type": "json"
+      }
+    ]
   },
   "private": true,
   "dependencies": {
@@ -37,7 +53,9 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^11.0.0",
     "protractor": "~7.0.0",
+    "semantic-release": "^17.3.8",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.1.2"

@@ -118,6 +118,47 @@
           }
         }
       }
+    },
+    "abstract": {
+      "projectType": "library",
+      "root": "projects/abstract",
+      "sourceRoot": "projects/abstract/src",
+      "prefix": "abs",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/abstract/tsconfig.lib.json",
+            "project": "projects/abstract/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/abstract/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/abstract/src/test.ts",
+            "tsConfig": "projects/abstract/tsconfig.spec.json",
+            "karmaConfig": "projects/abstract/karma.conf.js",
+            "codeCoverage": true
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/abstract/tsconfig.lib.json",
+              "projects/abstract/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-abstract"
