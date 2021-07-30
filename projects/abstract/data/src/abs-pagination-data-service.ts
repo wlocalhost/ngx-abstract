@@ -4,7 +4,7 @@ import {Directive} from '@angular/core';
 import {BehaviorSubject, Observable, Subscription} from 'rxjs';
 import {take} from 'rxjs/operators';
 
-type nextPageCb<T> = (page: number) => Observable<T[]>;
+export type nextPageCb<T> = (page: number) => Observable<T[]>;
 
 /**
  * A more complex **CDK DataSource** that supports pagination.
@@ -25,6 +25,7 @@ type nextPageCb<T> = (page: number) => Observable<T[]>;
  * </<cdk-virtual-scroll-viewport>
  * ```
  */
+/** @dynamic */
 @Directive()
 export abstract class AbsPaginationDataService<T> extends DataSource<T> {
   abstract pageSize = 50;
