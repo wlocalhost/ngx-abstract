@@ -5,6 +5,9 @@ import {startWith} from 'rxjs/operators';
 
 import {AbsControlValueAccessor} from './abs-control-value-accessor';
 
+/**
+ * Standard abstract class with `ControlValueAccessor` implementation and form group
+ */
 @Directive()
 export abstract class AbsControlValueAccessorWithForm<T> extends AbsControlValueAccessor<T> {
   abstract form: FormGroup;
