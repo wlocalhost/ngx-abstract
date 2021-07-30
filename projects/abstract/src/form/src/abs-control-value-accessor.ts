@@ -3,6 +3,9 @@ import {ControlValueAccessor} from '@angular/forms';
 import {AbsComponent} from '@wanoo21/ngx-abstract';
 import {BehaviorSubject, Observable} from 'rxjs';
 
+/**
+ * Standard abstract class with `ControlValueAccessor` implementation
+ */
 @Directive()
 export abstract class AbsControlValueAccessor<T> extends AbsComponent implements ControlValueAccessor {
   onChange: (_: T) => void;
