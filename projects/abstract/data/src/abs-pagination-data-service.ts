@@ -4,6 +4,8 @@ import {Directive} from '@angular/core';
 import {BehaviorSubject, Observable, Subscription} from 'rxjs';
 import {take} from 'rxjs/operators';
 
+type nextPageCb<T> = (page: number) => Observable<T[]>;
+
 /**
  * A more complex **CDK DataSource** that supports pagination.
  *
@@ -30,10 +32,7 @@ export abstract class AbsPaginationDataService<T> extends DataSource<T> {
   private _pageCache = new Set<number>();
   private _loadingData = false;
 
-  constructor(
-    private nextPageCb$: (page: number) => Observable<T[]>,
-    private onDestroy?: () => void
-  ) {
+  constructor(private nextPageCb$: nextPageCb<T>, private onDestroy?: () => void) {
     super();
   }
 
