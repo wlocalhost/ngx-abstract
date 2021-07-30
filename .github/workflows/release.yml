@@ -15,10 +15,17 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
-      - run: |
-          npm ci
-          npm run build
-      - run: npm run semantic-release
-        env: 
+      - run: npm ci
+
+      - name: Test Library
+        run: |
+          npm run lint
+
+      - name: Build library
+        run: npm run build
+
+      - name: Releae
+        run: npm run release
+        env:
           GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

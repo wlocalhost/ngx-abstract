@@ -1,6 +1,7 @@
 {
   "name": "ngx-abstract",
   "version": "0.0.0-development",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "prestart": "ng build",
@@ -10,8 +11,7 @@
     "test": "ng test abstract",
     "lint": "ng lint abstract",
     "e2e": "ng e2e",
-    "release": "standard-version",
-    "semantic-release": "semantic-release",
+    "release": "semantic-release",
     "commit": "git add . && git-cz"
   },
   "release": {
@@ -21,14 +21,14 @@
       [
         "@semantic-release/changelog",
         {
-          "changelogFile": "docs/CHANGELOG.md"
+          "changelogFile": "CHANGELOG.md"
         }
       ],
       [
         "@semantic-release/git",
         {
           "assets": [
-            "docs/CHANGELOG.md"
+            "CHANGELOG.md"
           ]
         }
       ],
@@ -41,21 +41,6 @@
       ]
     ]
   },
-  "standard-version": {
-    "packageFiles": [
-      {
-        "filename": "projects/abstract/package.json",
-        "type": "json"
-      }
-    ],
-    "bumpFiles": [
-      {
-        "filename": "projects/abstract/package.json",
-        "type": "json"
-      }
-    ]
-  },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~11.1.2",
     "@angular/common": "~11.1.2",
@@ -92,7 +77,6 @@
     "ng-packagr": "^11.0.0",
     "protractor": "~7.0.0",
     "semantic-release": "^17.4.4",
-    "standard-version": "^9.1.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.1.2"
