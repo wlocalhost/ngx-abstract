@@ -1,15 +1,45 @@
 {
   "name": "ngx-abstract",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "scripts": {
     "ng": "ng",
     "prestart": "ng build",
     "start": "ng serve",
-    "build": "ng build abstract",
+    "build": "ng build abstract --prod",
+    "watch:lib": "ng build abstract --watch",
     "test": "ng test abstract",
     "lint": "ng lint abstract",
     "e2e": "ng e2e",
-    "release": "standard-version"
+    "release": "standard-version",
+    "semantic-release": "semantic-release",
+    "commit": "git-cz"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "docs/CHANGELOG.md"
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "docs/CHANGELOG.md"
+          ]
+        }
+      ],
+      "@semantic-release/github",
+      [
+        "@semantic-release/npm",
+        {
+          "pkgRoot": "./dist/ngx-abstract"
+        }
+      ]
+    ]
   },
   "standard-version": {
     "packageFiles": [
@@ -35,6 +65,7 @@
     "@angular/platform-browser": "~11.1.2",
     "@angular/platform-browser-dynamic": "~11.1.2",
     "@angular/router": "~11.1.2",
+    "commitizen": "^4.2.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
@@ -55,9 +86,14 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "ng-packagr": "^11.0.0",
     "protractor": "~7.0.0",
+    "semantic-release": "^17.4.4",
     "standard-version": "^9.1.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wanoo21/ngx-abstract.git"
   }
 }
