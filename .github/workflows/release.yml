@@ -6,7 +6,6 @@ on:
       - master
       - next
       - beta
-      - "*.x"
 jobs:
   release:
     name: Release
@@ -17,6 +16,6 @@ jobs:
         with:
           node-version: "12.x"
       - run: |
-          npm install --no-package-lock
+          npm ci
           npm run build
       - run: npm run semantic-release
