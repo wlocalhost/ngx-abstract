@@ -25,6 +25,7 @@ jobs:
         run: npm run build
 
       - name: Releae
+        if: success()
         run: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
