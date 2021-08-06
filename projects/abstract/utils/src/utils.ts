@@ -24,3 +24,48 @@ export function getRootHost(hostname = location.hostname): string {
   // localhost doesn't support (.) before it
   return root === 'localhost' ? root : '.' + root;
 }
+
+/**
+ * Get converter number and suffix
+ * @example
+ * ```ts
+ * getNumberAndSuffix(100000) // -> {value: 100, suffix: 'K'}
+ * ```
+ */
+export function getNumberAndSuffix(value: number, fractionSize?: number): { value: number; suffix: string; } {
+  if (!fractionSize || fractionSize < 0) {
+    fractionSize = 1;
+  }
+  let abs = Math.abs(value);
+  const rounder = Math.pow(10, fractionSize);
+  let key = '';
+  const powers = [
+    {key: 'Q', value: Math.pow(10, 15)},
+    {key: 'T', value: Math.pow(10, 12)},
+    {key: 'B', value: Math.pow(10, 9)},
+    {key: 'M', value: Math.pow(10, 6)},
+    {key: 'K', value: 1000}
+  ];
+  for (const item of powers) {
+    let reduced = abs / item.value;
+    reduced = Math.round(reduced * rounder) / rounder;
+    if (reduced >= 1) {
+      abs = reduced;
+      key = item.key;
+      break;
+    }
+  }
+  return {value: abs, suffix: key};
+}
+
+/**
+ * Convert a number to string and add suffix
+ * @example
+ * ```ts
+ * suffixNumber(100000) // -> 100k
+ * ```
+ */
+export function suffixNumber(numberToConvert: number, fractionSize?: number): string {
+  const {value, suffix} = getNumberAndSuffix(numberToConvert, fractionSize);
+  return `${value}${suffix}`;
+}

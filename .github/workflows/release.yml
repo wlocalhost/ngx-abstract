@@ -24,7 +24,7 @@ jobs:
       - name: Build library
         run: npm run build
 
-      - name: Releae
+      - name: Release
         if: success()
         run: npm run release
         env:
