@@ -1,3 +1,11 @@
+# [0.1.0-beta.3](https://github.com/wanoo21/ngx-abstract/compare/v0.1.0-beta.2...v0.1.0-beta.3) (2021-08-07)
+
+
+### Features
+
+* **utils:** convert numbers and add K, M ... suffix ([b579e8d](https://github.com/wanoo21/ngx-abstract/commit/b579e8d3d2c10366eddcaa228cc6a6a0c970fe5d))
+* **utils:** getRootHost function ([606bf1c](https://github.com/wanoo21/ngx-abstract/commit/606bf1c18fae95bb823d46e0283434717eb6a2bb))
+
 # [0.1.0-beta.2](https://github.com/wanoo21/ngx-abstract/compare/v0.1.0-beta.1...v0.1.0-beta.2) (2021-08-02)
 
 
