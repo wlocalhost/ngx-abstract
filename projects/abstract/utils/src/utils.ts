@@ -16,7 +16,7 @@ export function isObjectEmpty(obj: object | null): boolean {
  * Get root host of current domain, if `hostname` is empty - `location.hostname` is used.
  * @example
  * ```ts
- * getRootHost('api.my-domain.com') // will return my-domain.com
+ * getRootHost('api.my-domain.com') // -> my-domain.com
  * ```
  */
 export function getRootHost(hostname = location.hostname): string {
