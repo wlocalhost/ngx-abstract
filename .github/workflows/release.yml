@@ -11,7 +11,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     env:
-#      LIBRARY_PATH: ./projects/ip-email-builder
+      ROOT_PATH: .
       LIBRARY_DIST_PATH: ./dist/ip-email-builder
     steps:
       - uses: actions/checkout@v2
@@ -30,7 +30,7 @@ jobs:
       - name: Release
         if: success()
         run: |
-          mv ./README.md $LIBRARY_DIST_PATH/README.md
+          mv $ROOT_PATH/README.md $LIBRARY_DIST_PATH/README.md
           npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
