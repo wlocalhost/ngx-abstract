@@ -69,3 +69,14 @@ export function suffixNumber(numberToConvert: number, fractionSize?: number): st
   const {value, suffix} = getNumberAndSuffix(numberToConvert, fractionSize);
   return `${value}${suffix}`;
 }
+
+/**
+ * Check if the value is valid Date
+ * @example
+ * ```ts
+ * isDate(3) // -> false
+ * ```
+ */
+export function isDate(value: any): value is Date {
+  return value instanceof Date && !isNaN(+value);
+}

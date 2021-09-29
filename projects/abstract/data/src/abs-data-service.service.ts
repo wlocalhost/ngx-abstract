@@ -1,6 +1,6 @@
 /* tslint:disable:variable-name */
 import {CollectionViewer, DataSource} from '@angular/cdk/collections';
-import {Directive} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {BehaviorSubject, Observable, Subscription} from 'rxjs';
 import {take} from 'rxjs/operators';
 
@@ -26,8 +26,8 @@ export type nextPageCb<T> = (page: number) => Observable<T[]>;
  * ```
  */
 /** @dynamic */
-@Directive()
-export abstract class AbsPaginationDataService<T> extends DataSource<T> {
+@Injectable()
+export abstract class AbsDataService<T> extends DataSource<T> {
   abstract pageSize = 50;
   private _subscription = new Subscription();
   private _pageCache = new Set<number>();

@@ -1,15 +1,15 @@
 import {Observable, of} from 'rxjs';
-import {AbsPaginationDataService} from './abs-pagination-data-service';
+import {AbsDataService} from './abs-data-service.service';
 
 interface MyData {
   id: number;
 }
 
-class TestClass extends AbsPaginationDataService<MyData> {
+class TestClass extends AbsDataService<MyData> {
   pageSize = 30;
 }
 
-function obs(page: number): Observable<MyData[]> {
+function obs(): Observable<MyData[]> {
   return of([]);
 }
 

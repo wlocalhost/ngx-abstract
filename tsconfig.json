@@ -6,6 +6,10 @@
       "@wanoo21/ngx-abstract": [
         "dist/abstract/abstract",
         "dist/abstract"
+      ],
+      "@wanoo21/ngx-abstract/*": [
+        "dist/abstract/abstract/*",
+        "dist/abstract/*"
       ]
     },
     "baseUrl": "./",
