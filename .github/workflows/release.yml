@@ -11,8 +11,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     env:
-#      LIBRARY_PATH: ./projects/ip-email-builder
-      LIBRARY_DIST_PATH: ./dist/ip-email-builder
+      LIBRARY_DIST_PATH: ./dist/abstract
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
