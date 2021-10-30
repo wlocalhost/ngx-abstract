@@ -1,3 +1,10 @@
+# [0.1.0-beta.5](https://github.com/wanoo21/ngx-abstract/compare/v0.1.0-beta.4...v0.1.0-beta.5) (2021-10-30)
+
+
+### Features
+
+* Abstract Page Component, AppInjector & Collection ([45dc254](https://github.com/wanoo21/ngx-abstract/commit/45dc254a3c3ab0a00b7b0c67c527dba890b81d49))
+
 # [0.1.0-beta.4](https://github.com/wanoo21/ngx-abstract/compare/v0.1.0-beta.3...v0.1.0-beta.4) (2021-09-29)
 
 
