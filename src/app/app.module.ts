@@ -12,7 +12,11 @@ import {SimpleDirective} from './simple.directive';
   ],
   imports: [
     BrowserModule,
-    NgxAbstractModule
+    NgxAbstractModule.withConfig({
+      page: {
+        prefix: '{title} >>>> sasa'
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

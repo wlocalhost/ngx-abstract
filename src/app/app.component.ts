@@ -10,7 +10,4 @@ export class AppComponent extends AbsPage {
   constructor() {
     super('My super title', 'My Super Description');
   }
-
-  changeTitle(): void {
-  }
 }
