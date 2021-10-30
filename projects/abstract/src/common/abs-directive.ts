@@ -12,7 +12,7 @@ import {AbsSimpleClass} from './abs-simple-class';
 export abstract class AbsDirective<T = HTMLElement> extends AbsSimpleClass {
   constructor(
     private elementRef: ElementRef,
-    public templateRef: TemplateRef<any>
+    readonly templateRef: TemplateRef<any>
   ) {
     super();
   }

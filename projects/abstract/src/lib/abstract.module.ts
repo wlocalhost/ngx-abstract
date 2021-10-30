@@ -1,10 +1,25 @@
-import {NgModule} from '@angular/core';
-import {AbstractComponent} from './abstract.component';
+import {Injector, NgModule} from '@angular/core';
 
+/**
+ * Application injector.
+ * Get application providers straight to component's body, without injecting into class' constructor.
+ * @example
+ * class MyClass {
+ *   myService: MyService = NgxAppInjector.get(MyService)
+ * }
+ */
+export let NgxAppInjector: Injector;
+
+/**
+ * NgxAbstractModule required to be imported
+ */
 @NgModule({
-  declarations: [AbstractComponent],
+  declarations: [],
   imports: [],
-  exports: [AbstractComponent]
+  exports: []
 })
-export class AbstractModule {
+export class NgxAbstractModule {
+  constructor(injector: Injector) {
+    NgxAppInjector = injector;
+  }
 }
