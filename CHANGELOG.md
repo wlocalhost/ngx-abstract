@@ -1,3 +1,11 @@
+# [0.1.0-beta.6](https://github.com/wanoo21/ngx-abstract/compare/v0.1.0-beta.5...v0.1.0-beta.6) (2021-11-06)
+
+
+### Features
+
+* **dialog:** Add dialog support ([6892595](https://github.com/wanoo21/ngx-abstract/commit/689259523b1d44ba9164c42e71036491b5761a23))
+* Add prefix for pages titles ([a54247b](https://github.com/wanoo21/ngx-abstract/commit/a54247bae8393d087b15ca5d395af5af2154dee2))
+
 # [0.1.0-beta.5](https://github.com/wanoo21/ngx-abstract/compare/v0.1.0-beta.4...v0.1.0-beta.5) (2021-10-30)
 
 
