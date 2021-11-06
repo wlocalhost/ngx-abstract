@@ -1,4 +1,6 @@
 import {Directive, ElementRef, TemplateRef} from '@angular/core';
+
+import {NgxAppInjector} from '../lib/abstract.module';
 import {AbsSimpleClass} from './abs-simple-class';
 
 /**
@@ -10,13 +12,19 @@ import {AbsSimpleClass} from './abs-simple-class';
  */
 @Directive()
 export abstract class AbsDirective<T = HTMLElement> extends AbsSimpleClass {
-  constructor(
-    private elementRef: ElementRef,
-    readonly templateRef: TemplateRef<any>
-  ) {
-    super();
-  }
+  /**
+   * Template reference of directive in case of `*sugar` directive
+   */
+  readonly templateRef = NgxAppInjector.get(TemplateRef);
+  /**
+   * @internal
+   * @private
+   */
+  private readonly elementRef = NgxAppInjector.get<ElementRef<T>>(ElementRef);
 
+  /**
+   * Directive's HTMLElement
+   */
   get el(): T {
     return this.elementRef.nativeElement;
   }

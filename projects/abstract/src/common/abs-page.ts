@@ -37,6 +37,8 @@ export abstract class AbsPage extends AbsComponent {
 
   /**
    * Change page title dynamically
+   * @param title The new page title
+   * @param withPrefix Whether to include the prefix to title or not
    */
   setTitle(title: string, withPrefix = true): void {
     const {prefix} = this.config;
@@ -49,6 +51,7 @@ export abstract class AbsPage extends AbsComponent {
 
   /**
    * Change page description dynamically
+   * @param description The new page description
    */
   setDescription(description: string): void {
     this.meta.addTag({name: 'description', content: description});
