@@ -1,3 +1,10 @@
+# [0.1.0-beta.7](https://github.com/wanoo21/ngx-abstract/compare/v0.1.0-beta.6...v0.1.0-beta.7) (2021-11-06)
+
+
+### Bug Fixes
+
+* **dialog:** Export NgxAbsDialogRef ([075306c](https://github.com/wanoo21/ngx-abstract/commit/075306cb0ed69c8c372ca8905e43ec483e5178c5))
+
 # [0.1.0-beta.6](https://github.com/wanoo21/ngx-abstract/compare/v0.1.0-beta.5...v0.1.0-beta.6) (2021-11-06)
 
 
