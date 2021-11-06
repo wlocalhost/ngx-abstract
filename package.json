@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "prestart": "ng build",
-    "start": "ng serve",
+    "start": "ng serve --open",
     "build": "ng build abstract --prod",
     "watch:lib": "ng build abstract --watch",
     "test": "ng test abstract",
