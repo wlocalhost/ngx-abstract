@@ -54,6 +54,6 @@ export abstract class AbsPage extends AbsComponent {
    * @param description The new page description
    */
   setDescription(description: string): void {
-    this.meta.addTag({name: 'description', content: description});
+    this.meta.updateTag({name: 'description', content: description});
   }
 }
