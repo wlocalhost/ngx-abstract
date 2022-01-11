@@ -1,3 +1,10 @@
+# [0.1.0-beta.8](https://github.com/wanoo21/ngx-abstract/compare/v0.1.0-beta.7...v0.1.0-beta.8) (2022-01-11)
+
+
+### Bug Fixes
+
+* **AbsPage:** Duplicate description meta tags ([26db89b](https://github.com/wanoo21/ngx-abstract/commit/26db89b4e14a75887bf0301a8668bbfc3d52dcda))
+
 # [0.1.0-beta.7](https://github.com/wanoo21/ngx-abstract/compare/v0.1.0-beta.6...v0.1.0-beta.7) (2021-11-06)
 
 
